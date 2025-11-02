@@ -2,7 +2,7 @@
 const Hello = () => {
     console.log("client side rendering")
   return (
-    <div>Hello</div>
+    <h1>Hello</h1>
   )
 };
 
