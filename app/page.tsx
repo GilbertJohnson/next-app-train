@@ -1,4 +1,6 @@
+import EventCard from "./components/EventCard";
 import ExploreBtn from "./components/ExploreBtn";
+import { events } from "../lib/constants";
 
 export default function Home() {
 
@@ -12,11 +14,9 @@ export default function Home() {
             <h3>Featured Events</h3>
 
             <ul className="events">
-              {[1,2,3,4,5].map((event)=>
-                <li key={event} className="event-card">
-                  <h4>Event Title {event}</h4>
-                  <p className="mt-2 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
-                  <span className="mt-3 block text-xs">Date: 20th Aug, 2023</span>
+              {events.map((event)=>
+                <li key={event.title}>
+                  <EventCard {...event} />
                 </li>
               )}
             </ul>
